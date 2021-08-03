@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model FormModel
+<div class="banner">
+    <div class="row">
+        <div class="col">
+            <h1>Hello, my name is Luke Berner</h1>
+        </div>
+    </div>
+</div>
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="~/Images/programming.jpg" alt="leftImage" class="left-image"/>
+        </div>
+        <div class="col">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book. It has survived not only five centuries, but also the leap into 
+                electronic typesetting, remaining essentially unchanged. It was popularised in 
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus PageMaker including 
+                versions of Lorem Ipsum
+            </p>
+            <a role="button" class="btn btn-primary" href="https://www.w3schools.com/" target="_blank">Go To Website</a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <form method="post">
+            <div class="col">
+                <label class="font-weight-bold">First Name</label>
+                <input type="text" class="form-control" asp-for="FirstName"/>
+            </div>
+            <div class="col">
+                <label class="font-weight-bold">Last Name</label>
+                <input type="text" class="form-control" asp-for="LastName"/>
+            </div>
+            <div class="col">
+                <label class="font-weight-bold">Reason For Viewing This</label>
+                <select class="form-control" asp-for="Reason">
+                    <option value="Want to hire">Want to hire</option>
+                    <option value="Want to hire">Really want to hire</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <label id="formMessage"></label>
+    </div>
+</div>
